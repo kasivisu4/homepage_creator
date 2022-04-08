@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import CreateSection from "./components/CreateSection";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="Form">
+        <div className="title">Create HomePage by custom HTML & CSS</div>
+        <div className="userNameLabel">UserName</div>
+      </div>
+      <CreateSection></CreateSection>
     </div>
   );
 }

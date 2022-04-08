@@ -1,38 +1,40 @@
 .App {
+  background-color: #003a8b;
+}
+
+.title {
+  position: relative;
+  width: 815px;
+  height: 52px;
+  left: 348px;
+  top: 20px;
+
+  font-family: "Mali";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 52px;
   text-align: center;
+
+  color: #fffdfd;
+
+  background: rgba(249, 0, 149, 0.381);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Form {
+  border-bottom: 10px inset #00f9cc;
+  margin-top: 20px;
 }
+.userNameLabel {
+  position: relative;
+  font-family: "Mali";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 52px;
+  padding-bottom: 50px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+  /* identical to box height */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  color: #ffffff;
 }
