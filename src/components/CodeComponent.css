@@ -47,15 +47,15 @@
   box-sizing: border-box;
 }
 .inner:before {
-  content: "HTML";
+  content: "CSS";
   padding-left: 10px;
-  background-color: rgb(56, 58, 56);
+  background-color: #f90095;
   color: #fff;
 }
 .inner:after {
-  content: "CSS";
-  padding-right: 20px;
-  background-color: #f90095;
+  content: "HTML";
+  padding-right: 10px;
+  background-color: rgb(56, 58, 56);
   color: #fff;
   text-align: right;
 }

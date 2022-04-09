@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./CodeComponent.css";
 
 export default function CodeComponent(props) {
+  const ref_holder = useRef([]);
   function section(index) {
     return (
       <div>
@@ -13,13 +14,15 @@ export default function CodeComponent(props) {
               name={"label"}
               id={"label"}
               onChange={(event) => {
-                let def_val = "html";
+                let def_val = "css";
+                console.log("def-val", def_val);
                 if (event.target.checked === false) {
-                  def_val = "css";
+                  def_val = "html";
                 }
                 let temp = [...props.code];
                 temp[index]["place_holder"] = def_val;
                 props.setCode(temp);
+                ref_holder.current[index].value = props.code[index][def_val];
               }}
             />
             <label className="label" htmlFor={"label"}>
@@ -39,12 +42,23 @@ export default function CodeComponent(props) {
           rows="5"
           cols="100"
           placeholder={props.code[index]["place_holder"]}
-          onChange={(event) => {
-            let temp = [...props.code];
-            temp[index][temp[index]["place_holder"]] = event.target.value;
-            props.setCode(temp);
-          }}
+          ref={(el) => (ref_holder.current[index] = el)}
+          onChange={(event) => {}}
         ></textarea>
+        <button
+          className="Render"
+          onClick={() => {
+            let temp = [...props.code];
+            temp[index][temp[index]["place_holder"]] =
+              ref_holder.current[index].value;
+            props.setCode(temp);
+            {
+              console.log(window.getSelection().toString());
+            }
+          }}
+        >
+          Render
+        </button>
       </div>
     );
   }
@@ -58,7 +72,10 @@ export default function CodeComponent(props) {
       <button
         type="button"
         onClick={() => {
-          props.setCode([...props.code, { html: null, css: null }]);
+          props.setCode([
+            ...props.code,
+            { html: null, css: null, place_holder: "html" },
+          ]);
         }}
       >
         Add section

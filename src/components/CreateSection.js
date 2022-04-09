@@ -9,6 +9,7 @@ export default function CreateSection() {
   ]);
   return (
     <div className="CreateSection">
+      {console.log(code)}
       <CodeComponent code={code} setCode={setCode}></CodeComponent>
       <RenderedComponent code={code} setCode={setCode}></RenderedComponent>
     </div>
