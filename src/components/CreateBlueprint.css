@@ -1,0 +1,27 @@
+.CreateBlueprint {
+  border: 10px solid #000000;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 20px;
+}
+
+.columnLabel {
+  background-color: #180374;
+  border: 10px solid #180374;
+  color: #fefdfd;
+  padding: 20px;
+  margin: 40px;
+}
+
+.columnButton {
+  justify-content: right;
+}
+
+.xAxis {
+  width: 100%;
+  padding: 0;
+  padding: 20px;
+  margin: 20px;
+}

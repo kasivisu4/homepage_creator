@@ -1,13 +1,14 @@
 .App {
-  background-color: #003a8b;
+  background-color: #ffffff;
 }
 
 .title {
   position: relative;
-  width: 815px;
+  width: 700px;
   height: 52px;
-  left: 348px;
+  left: 400px;
   top: 20px;
+  border-radius: 25px;
 
   font-family: "Mali";
   font-style: normal;
@@ -16,25 +17,34 @@
   line-height: 52px;
   text-align: center;
 
-  color: #fffdfd;
+  color: #0a2ddf;
 
   background: rgba(249, 0, 149, 0.381);
 }
 
 .Form {
+  padding-bottom: 60px;
   border-bottom: 10px inset #00f9cc;
-  margin-top: 20px;
 }
-.userNameLabel {
+.userNameDiv {
   position: relative;
   font-family: "Mali";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 52px;
-  padding-bottom: 50px;
+  text-align: right;
+  color: #f31111;
+  padding-right: 150px;
+  margin-top: 90px;
+}
 
-  /* identical to box height */
-
-  color: #ffffff;
+.userNameInput {
+  border: 0;
+  color: #f31111;
+  font-family: "Mali";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 200;
+  width: 200px;
 }
