@@ -1,5 +1,5 @@
 .App {
-  background-color: #ffffff;
+  background-color: #5979a56a;
 }
 
 .title {
@@ -17,34 +17,66 @@
   line-height: 52px;
   text-align: center;
 
-  color: #0a2ddf;
+  color: #eeeef0;
 
-  background: rgba(249, 0, 149, 0.381);
+  background: rgba(232, 89, 177, 0.57);
 }
 
-.Form {
-  padding-bottom: 60px;
-  border-bottom: 10px inset #00f9cc;
+.Header {
+  margin-top: 30px;
+
+  display: flex;
+  flex-direction: row;
 }
 .userNameDiv {
-  position: relative;
   font-family: "Mali";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 40;
   font-size: 20px;
   line-height: 52px;
-  text-align: right;
-  color: #f31111;
-  padding-right: 150px;
-  margin-top: 90px;
+  text-align: left;
+  color: #f8f8f8;
+  margin-left: 50px;
+
+  margin-top: 60px;
 }
 
 .userNameInput {
   border: 0;
-  color: #f31111;
+  color: rgb(232, 89, 178);
   font-family: "Mali";
-  font-size: 20px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 200;
-  width: 200px;
+  width: 300px;
+  margin-right: 300px;
+}
+
+.customURLInput {
+  border: 0;
+  color: rgb(232, 89, 178);
+  font-family: "Mali";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 200;
+  width: 300px;
+  margin-right: 200px;
+}
+
+.formSubmit {
+  background-color: #799660;
+  color: black;
+
+  border: 5px inset rgba(232, 89, 177, 0.568);
+
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 200px;
+  margin-top: 20px;
+  margin-left: 600px;
+}
+
+.formSubmit:hover {
+  background-color: #469204;
+  color: white;
 }

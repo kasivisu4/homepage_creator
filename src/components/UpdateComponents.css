@@ -1,0 +1,14 @@
+.select_component {
+  color: #fff;
+  margin-left: 100px;
+}
+
+.Component_selection {
+  margin: 10px;
+}
+.selectComponents {
+  display: flex;
+  flex-direction: row;
+  border-top: 10px solid rgba(232, 89, 177, 0.568);
+  border-bottom: 10px solid rgba(232, 89, 177, 0.568);
+}

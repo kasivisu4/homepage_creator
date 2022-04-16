@@ -1,0 +1,6 @@
+.RenderComponentDiv {
+  margin-left: 100px;
+  border-left: 10px inset rgba(232, 89, 177, 0.568);
+  background-color: #fff;
+  width: 100%;
+}

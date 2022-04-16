@@ -1,18 +1,27 @@
 .CreateBlueprint {
-  border: 10px solid #000000;
-  position: absolute;
+  border: 10px solid rgba(232, 89, 177, 0.568);
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 20px;
-  margin: 20px;
+  margin: 60px;
+  background-color: #c4c4c4;
+}
+
+.BluePrintTitle {
+  text-align: center;
+  color: rgb(6, 6, 6);
+  font-family: "Mali";
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
 .columnLabel {
   background-color: #180374;
   border: 10px solid #180374;
   color: #fefdfd;
-  padding: 20px;
-  margin: 40px;
+  padding: 15px;
+  margin: 10px;
 }
 
 .columnButton {
@@ -21,7 +30,6 @@
 
 .xAxis {
   width: 100%;
-  padding: 0;
-  padding: 20px;
-  margin: 20px;
+  padding: 0px;
+  margin: 40px;
 }

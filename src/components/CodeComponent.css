@@ -1,0 +1,25 @@
+.CodeComponent {
+  padding: 20px;
+}
+
+.TextDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.language_selection {
+  width: 100px;
+  margin: 5px;
+}
+
+.setText {
+  width: 500px;
+  margin: 5px;
+  height: 600px;
+  border: 0;
+  font-size: 30px;
+  font-family: "Mali";
+  font-style: normal;
+  background-color: #2a2a2a;
+  color: #fff;
+}

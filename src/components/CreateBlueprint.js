@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import "./CreateBlueprint.css";
-export default function CreateBlueprint() {
-  let [noOfComponents, setNoOfComponents] = useState([[1]]);
+export default function CreateBlueprint(props) {
   let counter = 0;
 
   return (
     <div className="CreateBlueprint">
-      {console.log(noOfComponents)}
-      {noOfComponents.map((x, index) => {
+      <div className="BluePrintTitle">Create your Page BluePrint</div>
+      {props.noOfComponents.map((x, index) => {
         return (
           <div className="xAxis">
             {x.map((y) => {
@@ -28,9 +27,13 @@ export default function CreateBlueprint() {
             <button
               className="columnButton"
               onClick={() => {
-                let temp = [...noOfComponents];
-                temp[index].push(1);
-                setNoOfComponents(temp);
+                let temp = [...props.noOfComponents];
+                temp[index].push({
+                  css: null,
+                  html: null,
+                  place_holder: "html",
+                });
+                props.setNoOfComponents(temp);
               }}
               disabled={x.length > 4}
             >
@@ -43,7 +46,10 @@ export default function CreateBlueprint() {
       <button
         className="add_components"
         onClick={() => {
-          setNoOfComponents([...noOfComponents, [1]]);
+          props.setNoOfComponents([
+            ...props.noOfComponents,
+            [{ css: null, html: null, place_holder: "html" }],
+          ]);
         }}
       >
         Add Div
