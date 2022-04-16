@@ -4,9 +4,9 @@
 
 .title {
   position: relative;
-  width: 700px;
+  width: 900px;
   height: 52px;
-  left: 400px;
+  left: 300px;
   top: 20px;
   border-radius: 25px;
 
@@ -64,14 +64,14 @@
 }
 
 .formSubmit {
-  background-color: #799660;
+  background-color: #afce94;
   color: black;
   border: 5px inset rgba(232, 89, 177, 0.568);
   border-radius: 5px;
   padding: 10px;
   margin-right: 200px;
   margin-top: 20px;
-  margin-left: 600px;
+  margin-left: 700px;
 }
 
 .formSubmit:hover {

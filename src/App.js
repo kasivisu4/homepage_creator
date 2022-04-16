@@ -3,6 +3,7 @@ import { useState } from "react";
 import CreateBlueprint from "./components/CreateBlueprint";
 import Templates from "./components/Templates";
 import UpdateComponents from "./components/UpdateComponents";
+import { Link } from "react-router-dom";
 
 function App() {
   let [userName, setUserName] = useState("root");
@@ -61,7 +62,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="title">Create HomePage by custom HTML & CSS</div>
+      <div className="title">Create HomePage By REACT Custom HTML & CSS</div>
       {set_Form_details()}
       <div className="Header">
         {form()}
@@ -76,7 +77,9 @@ function App() {
         className="formSubmit"
         onClick={() => setSubmit(true)}
       >
-        Let's Create!
+        <Link to="/homepage_creator/user_home_page" state={{ noOfComponents }}>
+          Let's Create!
+        </Link>
       </button>
     </div>
   );

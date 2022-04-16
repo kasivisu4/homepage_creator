@@ -11,7 +11,11 @@ export default function RenderComponent(props) {
           dangerouslySetInnerHTML={{
             __html: props.code[index[0]][index[1]]["html"],
           }}
-          style={eval("({" + props.code[index[0]][index[1]]["css"] + "})")}
+          style={eval(
+            "({" +
+              (props.code[index[0]][index[1]]["css"] || "fontSize:20") +
+              "})"
+          )}
         />
       );
     } catch (err) {
