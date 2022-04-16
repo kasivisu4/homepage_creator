@@ -77,3 +77,14 @@
   background-color: #469204;
   color: white;
 }
+
+.RefPage {
+  color: white;
+  font-family: "Mali";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 200;
+  width: 300px;
+  margin: 30px;
+  margin-top: 80px;
+}

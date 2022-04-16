@@ -14,7 +14,7 @@ root.render(
       <Routes>
         <Route path="/homepage_creator" element={<App />} />
         <Route
-          path="/homepage_creator/user_home_page"
+          path="/homepage_creator/user_home_page:id"
           element={<UserHomePage />}
         />
       </Routes>

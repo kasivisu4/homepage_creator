@@ -1,9 +1,10 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CreateBlueprint from "./components/CreateBlueprint";
-import Templates from "./components/Templates";
+import RefPages from "./components/RefPages";
 import UpdateComponents from "./components/UpdateComponents";
 import { Link } from "react-router-dom";
+import HomePageMinimongo from "./models/HomePageMinimongo";
 
 function App() {
   let [userName, setUserName] = useState("root");
@@ -12,21 +13,34 @@ function App() {
   let [noOfComponents, setNoOfComponents] = useState([
     [{ css: null, html: null, place_holder: "html" }],
   ]);
+  let [getPages, setAllPages] = useState();
+  let Home_Page_Minimongo = new HomePageMinimongo();
+
+  useEffect(() => {
+    async function getPage() {
+      let components_from_mongo = await Home_Page_Minimongo.getPage({});
+      setAllPages(components_from_mongo);
+    }
+    getPage();
+  }, []);
+
+  async function setPage(page) {
+    await Home_Page_Minimongo.removePage({ url: customURLInput });
+    await Home_Page_Minimongo.createPage({ url: customURLInput, page: page });
+    let mongo_page = await Home_Page_Minimongo.getPage({
+      url: customURLInput,
+    });
+    setNoOfComponents(mongo_page[0]["page"]);
+  }
 
   function set_Form_details() {
-    function handleKeyDown(event, setFunction) {
-      if (event.keyCode === 13) {
-        setFunction(event.target.value);
-      }
-    }
-
     return (
       <div className="userNameDiv">
         UserName :{" "}
         <input
           className="userNameInput"
-          onKeyDown={(event) => {
-            handleKeyDown(event, setUserName);
+          onChange={(event) => {
+            setUserName(event.target.value);
           }}
           placeholder={
             userName === "root" ? "  Enter Your User Name" : userName
@@ -36,13 +50,13 @@ function App() {
         <input
           className="customURLInput"
           type="url"
-          onKeyDown={(event) => {
-            handleKeyDown(event, setCustomURLInput);
+          onChange={(event) => {
+            setCustomURLInput(event.target.value);
           }}
           placeholder={
             customURLInput === "root_url"
               ? "  Enter Suffix URL"
-              : customURLInput
+              : userName + "_"
           }
         ></input>
       </div>
@@ -54,7 +68,7 @@ function App() {
       <div className="Components">
         <CreateBlueprint
           noOfComponents={noOfComponents}
-          setNoOfComponents={setNoOfComponents}
+          setNoOfComponents={setPage}
         ></CreateBlueprint>
       </div>
     );
@@ -64,23 +78,26 @@ function App() {
     <div className="App">
       <div className="title">Create HomePage By REACT Custom HTML & CSS</div>
       {set_Form_details()}
-      <div className="Header">
-        {form()}
-        {<Templates></Templates>}
-      </div>
+      <div className="Header">{form()}</div>
       <UpdateComponents
         noOfComponents={noOfComponents}
-        setNoOfComponents={setNoOfComponents}
+        setNoOfComponents={setPage}
       ></UpdateComponents>
       <button
         type="submit"
         className="formSubmit"
         onClick={() => setSubmit(true)}
       >
-        <Link to="/homepage_creator/user_home_page" state={{ noOfComponents }}>
+        <Link to={"/homepage_creator/user_home_page:" + customURLInput}>
           Let's Create!
         </Link>
       </button>
+      <div className="RefPage">
+        <b>
+          <u>Ref Pages:</u>
+        </b>
+      </div>
+      {<RefPages pages={getPages}></RefPages>}
     </div>
   );
 }

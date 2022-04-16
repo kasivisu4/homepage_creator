@@ -1,0 +1,28 @@
+.RefPages {
+  margin-left: 10px;
+  font-size: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+
+.iframe {
+  zoom: 0.75;
+  -moz-transform: scale(0.75);
+  border-radius: 10px;
+  border: 5px solid rgba(232, 89, 177, 0.568);
+}
+
+.RefLink {
+  font-size: 20px;
+  color: #fefdfd;
+  margin-top: 0px;
+  margin-left: 150px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  border: 5px solid rgba(232, 89, 177, 0.568);
+  width: 300px;
+  background-color: #fefdfd;
+}
