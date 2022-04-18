@@ -15,7 +15,7 @@ Also, Used the Minimongo IndexDB to store the data in the Browser Storage.
 
 Design / Business Requirements : [HomePage Creator](https://github.com/kasivisu4/homepage_creator/blob/main/Documents/Design/Business_Requirements.pdf)
 
-JSDoc : [jsdoc](https://github.com/kasivisu4/homepage_creator/tree/main/Design/jsDoc)
+JSDoc : [jsdoc](https://github.com/kasivisu4/homepage_creator/main/Design/jsDoc)
 
 ## Contributors :
 
