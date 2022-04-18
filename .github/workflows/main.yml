@@ -39,3 +39,7 @@ jobs:
             source_dir: ./src
             recurse: true
             output_dir: ./out
+            
+      # Runs a last command using the runners shell
+      - name: Run a one-line script
+        run: ls
