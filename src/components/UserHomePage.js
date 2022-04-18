@@ -7,7 +7,7 @@ import HomePageMinimongo from "../models/HomePageMinimongo";
  *  This Function Renders the User HomePage based on the BluePrint Created from the home page
  * @returns Renders the User Home Page
  */
-export default function UserHomePage() {
+function UserHomePage() {
   let customUrl = useParams().id;
 
   customUrl = customUrl.split(":")[1];
@@ -61,3 +61,5 @@ export default function UserHomePage() {
     </div>
   );
 }
+
+export default UserHomePage;

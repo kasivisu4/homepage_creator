@@ -8,7 +8,7 @@ import RenderComponent from "./RenderComponent";
  * @param {} props Components,setComponents The 2d array representation for the components
  * @returns Update the components
  */
-export default function UpdateComponents(props) {
+function UpdateComponents(props) {
   let [selectedComponent, setSelectedComponent] = useState("0,0");
 
   /**
@@ -63,3 +63,5 @@ export default function UpdateComponents(props) {
     </div>
   );
 }
+
+export default UpdateComponents;

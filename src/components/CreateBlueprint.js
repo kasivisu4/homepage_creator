@@ -6,7 +6,7 @@ import "./CreateBlueprint.css";
  * @param {*} props
  * @returns returns the blueprint component
  */
-export default function CreateBlueprint(props) {
+function CreateBlueprint(props) {
   let counter = 0;
   return (
     <div className="CreateBlueprint">
@@ -62,3 +62,5 @@ export default function CreateBlueprint(props) {
     </div>
   );
 }
+
+export default CreateBlueprint;

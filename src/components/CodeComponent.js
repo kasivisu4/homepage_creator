@@ -6,7 +6,7 @@ import "./CodeComponent.css";
  * @param {prop} props  2d array of the user homepage blue print and the index for the code update
  * @returns The code component
  */
-export default function CodeComponent(props) {
+function CodeComponent(props) {
   let [currState, setCurrState] = useState("html");
 
   /**
@@ -42,3 +42,5 @@ export default function CodeComponent(props) {
 
   return <div className="CodeComponent">{setText(props.index.split(","))}</div>;
 }
+
+export default CodeComponent;

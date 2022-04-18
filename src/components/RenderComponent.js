@@ -6,7 +6,7 @@ import "./RenderComponent.css";
  * @param {props} props The 2d blueprint created by the user.
  * @returns Rendered component
  */
-export default function RenderComponent(props) {
+function RenderComponent(props) {
   function components(index) {
     try {
       return (
@@ -33,3 +33,5 @@ export default function RenderComponent(props) {
     </div>
   );
 }
+
+export default RenderComponent;

@@ -5,7 +5,7 @@ import minimongo from "minimongo";
  * @param {String} dbName The DbName used for the minimongo
  * @returns the db instance
  */
-export default function HomePageMinimongo(dbName = "HomePageCreator") {
+function HomePageMinimongo(dbName = "HomePageCreator") {
   const IndexedDb = minimongo.IndexedDb;
 
   const userHomepage = {};
@@ -66,3 +66,5 @@ export default function HomePageMinimongo(dbName = "HomePageCreator") {
 
   return userHomepage;
 }
+
+export default HomePageMinimongo;

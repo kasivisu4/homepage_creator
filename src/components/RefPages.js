@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
  * @param {page} props Pages stored in the minimongo
  * @returns All the pages created by the user
  */
-export default function RefPages(props) {
+function RefPages(props) {
   let urlElements = window.location.href;
 
   return (
@@ -33,3 +33,5 @@ export default function RefPages(props) {
     </div>
   );
 }
+
+export default RefPages;
