@@ -1,8 +1,12 @@
 import React from "react";
 import "./RenderComponent.css";
 
+/**
+ * This function helps to render the 2d component created by the user
+ * @param {props} props The 2d blueprint created by the user.
+ * @returns Rendered component
+ */
 export default function RenderComponent(props) {
-  console.log(props);
   function components(index) {
     try {
       return (

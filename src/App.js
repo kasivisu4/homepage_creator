@@ -6,10 +6,13 @@ import UpdateComponents from "./components/UpdateComponents";
 import { Link } from "react-router-dom";
 import HomePageMinimongo from "./models/HomePageMinimongo";
 
+/**
+ * This function is the main entry point and is responsible for creating the homepage page and also used to navigate to users home page
+ * @returns The Home Page Creator component
+ */
 function App() {
   let [userName, setUserName] = useState("root");
   let [customURLInput, setCustomURLInput] = useState("root_url");
-  let [submit, setSubmit] = useState(false);
   let [noOfComponents, setNoOfComponents] = useState([
     [{ css: null, html: null, place_holder: "html" }],
   ]);
@@ -24,15 +27,24 @@ function App() {
     getPage();
   }, []);
 
+  /**
+   * This function is used to set the blue print to minimongo
+   * @param {} page
+   */
   async function setPage(page) {
+    setNoOfComponents(page);
     await Home_Page_Minimongo.removePage({ url: customURLInput });
     await Home_Page_Minimongo.createPage({ url: customURLInput, page: page });
+
     let mongo_page = await Home_Page_Minimongo.getPage({
       url: customURLInput,
     });
-    setNoOfComponents(mongo_page[0]["page"]);
   }
 
+  /**
+   * This function is used to create the form for the user to input his username and the custom url
+   * @returns Form Components
+   */
   function set_Form_details() {
     return (
       <div className="userNameDiv">
@@ -63,31 +75,23 @@ function App() {
     );
   }
 
-  function form() {
-    return (
-      <div className="Components">
-        <CreateBlueprint
-          noOfComponents={noOfComponents}
-          setNoOfComponents={setPage}
-        ></CreateBlueprint>
-      </div>
-    );
-  }
-
   return (
     <div className="App">
       <div className="title">Create HomePage By REACT Custom HTML & CSS</div>
       {set_Form_details()}
-      <div className="Header">{form()}</div>
+      <div className="Header">
+        <div className="Components">
+          <CreateBlueprint
+            noOfComponents={noOfComponents}
+            setNoOfComponents={setPage}
+          ></CreateBlueprint>
+        </div>
+      </div>
       <UpdateComponents
         noOfComponents={noOfComponents}
         setNoOfComponents={setPage}
       ></UpdateComponents>
-      <button
-        type="submit"
-        className="formSubmit"
-        onClick={() => setSubmit(true)}
-      >
+      <button type="submit" className="formSubmit">
         <Link to={"/homepage_creator/user_home_page:" + customURLInput}>
           Let's Create!
         </Link>

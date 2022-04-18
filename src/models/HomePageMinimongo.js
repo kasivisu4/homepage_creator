@@ -1,5 +1,10 @@
 import minimongo from "minimongo";
 
+/**
+ * This function is used for the indexdb connection of the browser to store the data
+ * @param {String} dbName The DbName used for the minimongo
+ * @returns the db instance
+ */
 export default function HomePageMinimongo(dbName = "HomePageCreator") {
   const IndexedDb = minimongo.IndexedDb;
 

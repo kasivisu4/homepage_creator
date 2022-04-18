@@ -3,15 +3,23 @@ import "./UpdateComponents.css";
 import CodeComponent from "./CodeComponent";
 import RenderComponent from "./RenderComponent";
 
+/**
+ * The User can update his blue print
+ * @param {} props Components,setComponents The 2d array representation for the components
+ * @returns Update the components
+ */
 export default function UpdateComponents(props) {
-  console.log("UpdateComponents", props);
   let [selectedComponent, setSelectedComponent] = useState("0,0");
+
+  /**
+   * The user can select a component from the dropdown
+   * @returns Component selection Dropdown
+   */
   function component_selection() {
     let components = [];
     props.noOfComponents.forEach((x, i) =>
       x.forEach((y, j) => components.push([i, j]))
     );
-    console.log(components);
     return (
       <div className="select_component">
         Please select the component:
@@ -28,7 +36,9 @@ export default function UpdateComponents(props) {
           }}
         >
           {components.map((x, i) => (
-            <option value={x.toString()}>{i + 1}</option>
+            <option value={x.toString()} key={"option" + i}>
+              {i + 1}
+            </option>
           ))}
         </select>
       </div>

@@ -1,9 +1,19 @@
 import React, { useState } from "react";
 import "./CodeComponent.css";
 
+/**
+ * This function is responsible for the user home page html and CSS creation
+ * @param {prop} props  2d array of the user homepage blue print and the index for the code update
+ * @returns The code component
+ */
 export default function CodeComponent(props) {
   let [currState, setCurrState] = useState("html");
 
+  /**
+   * This function is used to create the code of html and css for the user home page
+   * @param {integer} index Used for get specific code component
+   * @returns TextArea CodeComponent
+   */
   function set_text(index) {
     return (
       <div className="TextDiv">

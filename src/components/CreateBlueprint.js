@@ -1,17 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import "./CreateBlueprint.css";
+
+/**
+ * This function is responsible for creating a blueprint for a user home page
+ * @param {} props noOfComponents,setComponents 2d array of components
+ * @returns The blueprint to create the user home pages
+ */
 export default function CreateBlueprint(props) {
   let counter = 0;
-
   return (
     <div className="CreateBlueprint">
       <div className="BluePrintTitle">Create your Page BluePrint</div>
-      {props.noOfComponents.map((x, index) => {
+      {props.noOfComponents.map((x, x_index) => {
         return (
-          <div className="xAxis">
-            {x.map((y) => {
+          <div className="xAxis" key={"xAxis" + x_index}>
+            {x.map((y, y_index) => {
               return (
-                <label className="columnLabel">
+                <label className="columnLabel" key={"columnLabel" + y_index}>
                   {(function () {
                     if (counter < 9) {
                       counter += 1;
@@ -28,7 +33,7 @@ export default function CreateBlueprint(props) {
               className="columnButton"
               onClick={() => {
                 let temp = [...props.noOfComponents];
-                temp[index].push({
+                temp[x_index].push({
                   css: null,
                   html: null,
                   place_holder: "html",
