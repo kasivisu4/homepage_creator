@@ -9,7 +9,6 @@ https://kasivisu4.github.io/homepage_creator/
 In this project, The user has the power to update the React Custom CSS and HTML tags directly on the page,
 so he doesn’t have to spend more time on the deployment instead he creates and
 updates the pages directly from the Page
-
 Also, Used the Minimongo IndexDB to store the data in the Browser Storage.
 
 ## Documentation :
