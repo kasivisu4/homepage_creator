@@ -14,7 +14,7 @@ export default function CodeComponent(props) {
    * @param {integer} index Used for get specific code component
    * @returns TextArea CodeComponent
    */
-  function set_text(index) {
+  function setText(index) {
     return (
       <div className="TextDiv">
         <select
@@ -40,7 +40,5 @@ export default function CodeComponent(props) {
     );
   }
 
-  return (
-    <div className="CodeComponent">{set_text(props.index.split(","))}</div>
-  );
+  return <div className="CodeComponent">{setText(props.index.split(","))}</div>;
 }

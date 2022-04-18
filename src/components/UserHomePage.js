@@ -8,16 +8,16 @@ import HomePageMinimongo from "../models/HomePageMinimongo";
  * @returns Renders the User Home Page
  */
 export default function UserHomePage() {
-  let custom_url = useParams().id;
+  let customUrl = useParams().id;
 
-  custom_url = custom_url.split(":")[1];
+  customUrl = customUrl.split(":")[1];
   let Home_Page_Minimongo = new HomePageMinimongo();
   let [components, setComponents] = useState();
 
   useEffect(() => {
     async function getPage() {
       let components_from_mongo = await Home_Page_Minimongo.getPage({
-        url: custom_url,
+        url: customUrl,
       });
 
       setComponents(components_from_mongo[0]["page"]);

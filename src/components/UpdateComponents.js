@@ -15,7 +15,7 @@ export default function UpdateComponents(props) {
    * The user can select a component from the dropdown
    * @returns Component selection Dropdown
    */
-  function component_selection() {
+  function componentSelection() {
     let components = [];
     props.noOfComponents.forEach((x, i) =>
       x.forEach((y, j) => components.push([i, j]))
@@ -47,7 +47,7 @@ export default function UpdateComponents(props) {
 
   return (
     <div className="UpdateComponents">
-      {component_selection()}
+      {componentSelection()}
       <div className="selectComponents">
         <CodeComponent
           code={props.noOfComponents}

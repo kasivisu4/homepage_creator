@@ -10,6 +10,7 @@ import HomePageMinimongo from "./models/HomePageMinimongo";
  * This function is the main entry point and is responsible for creating the homepage page and also used to navigate to users home page
  * @returns The Home Page Creator component
  */
+
 function App() {
   let [userName, setUserName] = useState("root");
   let [customURLInput, setCustomURLInput] = useState("root_url");
@@ -45,7 +46,7 @@ function App() {
    * This function is used to create the form for the user to input his username and the custom url
    * @returns Form Components
    */
-  function set_Form_details() {
+  function setFormDetails() {
     return (
       <div className="userNameDiv">
         UserName :{" "}
@@ -78,7 +79,7 @@ function App() {
   return (
     <div className="App">
       <div className="title">Create HomePage By REACT Custom HTML & CSS</div>
-      {set_Form_details()}
+      {setFormDetails()}
       <div className="Header">
         <div className="Components">
           <CreateBlueprint
@@ -93,7 +94,7 @@ function App() {
       ></UpdateComponents>
       <button type="submit" className="formSubmit">
         <Link to={"/homepage_creator/user_home_page:" + customURLInput}>
-          Let's Create!
+          Generate
         </Link>
       </button>
       <div className="RefPage">

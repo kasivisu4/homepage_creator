@@ -2,9 +2,9 @@ import React from "react";
 import "./CreateBlueprint.css";
 
 /**
- * This function is responsible for creating a blueprint for a user home page
- * @param {} props noOfComponents,setComponents 2d array of components
- * @returns The blueprint to create the user home pages
+ *creates the blueprint
+ * @param {*} props
+ * @returns returns the blueprint component
  */
 export default function CreateBlueprint(props) {
   let counter = 0;
