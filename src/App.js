@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import CreateBlueprint from "./components/CreateBlueprint";
-import RefPages from "./components/RefPages";
+import CreatedPages from "./components/CreatedPages";
 import UpdateComponents from "./components/UpdateComponents";
 import { Link } from "react-router-dom";
 import HomePageMinimongo from "./models/HomePageMinimongo";
@@ -99,10 +99,10 @@ function App() {
       </button>
       <div className="RefPage">
         <b>
-          <u>Ref Pages:</u>
+          <u>Created Pages:</u>
         </b>
       </div>
-      {<RefPages pages={getPages}></RefPages>}
+      {<CreatedPages pages={getPages}></CreatedPages>}
     </div>
   );
 }

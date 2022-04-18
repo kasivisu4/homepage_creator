@@ -7,11 +7,11 @@ import { Link } from "react-router-dom";
  * @param {page} props Pages stored in the minimongo
  * @returns All the pages created by the user
  */
-function RefPages(props) {
+function CreatedPages(props) {
   let urlElements = window.location.href;
 
   return (
-    <div className="RefPages">
+    <div className="CreatedPages">
       {props.pages?.map((page, index) => {
         return (
           <div className="iframeDiv" key={"iframeDiv" + index}>
@@ -19,7 +19,7 @@ function RefPages(props) {
               title={"iframe" + index}
               className="iframe"
               src={urlElements + "/user_home_page:" + page.url}
-              width="700px"
+              width="600px"
               height="300px"
             ></iframe>
             <div className="RefLink">
@@ -34,4 +34,4 @@ function RefPages(props) {
   );
 }
 
-export default RefPages;
+export default CreatedPages;

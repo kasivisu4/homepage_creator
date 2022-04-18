@@ -27,6 +27,7 @@ function UserHomePage() {
 
   return (
     <div className="UserHomePage">
+      <button className="generate">Generate PDF</button>
       <div className="Render">
         {components?.map((row, row_index) => {
           let length = row.length;
