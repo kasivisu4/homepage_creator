@@ -71,6 +71,8 @@ fontSize:100,textAlign:"center",color:"Red"
 
 ```
 
+## Result :
+
 ## Documentation :
 
 Design / Business Requirements : [HomePage Creator](https://github.com/kasivisu4/homepage_creator/blob/main/Documents/Design/Business_Requirements.pdf)
