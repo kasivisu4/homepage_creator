@@ -13,7 +13,9 @@ Also, Used the Minimongo IndexDB to store the data in the Browser Storage.
 
 ## Usage :
 
-The Homepage can be created with multiple components. First, Developer can create 2d blueprint of his homepage. Then, he can update for each component the [React Custom CSS and HTML tags](https://reactjs.org/docs/dom-elements.html#style). Once the user creates his homepage he can navigate to his homepage. The url of the homepage will be /homepage_creator/user_home_page:<custom_Url>
+The Homepage can be created with multiple components. First, Developer can create 2d blueprint of his homepage. Then, he can update for each component the [React Custom CSS and HTML tags](https://reactjs.org/docs/dom-elements.html#style). Once the user creates his homepage he can navigate to his homepage.
+
+The url of the homepage will be /homepage_creator/user_home_page:<custom_Url>
 
 ## Example :
 
