@@ -73,6 +73,8 @@ fontSize:100,textAlign:"center",color:"Red"
 
 ## Result :
 
+![alt text](https://github.com/kasivisu4/homepage_creator/blob/main/public/homepage_test.png)
+
 ## Documentation :
 
 Design / Business Requirements : [HomePage Creator](https://github.com/kasivisu4/homepage_creator/blob/main/Documents/Design/Business_Requirements.pdf)
