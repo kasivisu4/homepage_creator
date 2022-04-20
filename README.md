@@ -19,7 +19,7 @@ The url of the homepage will be /homepage_creator/user_home_page:<custom_Url>
 
 ## Example :
 
-In this example we will create [4 * 1] Component ![alt text]()
+In this example we will create [4 * 1] Component ![alt text](https://github.com/kasivisu4/homepage_creator/blob/main/public/4_1_component_creation.png)
 
 Note: In order to create the homepage, we need to provide custom_url which is key to the homepage.
 
